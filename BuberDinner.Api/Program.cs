@@ -1,6 +1,5 @@
 
 using BuberDinner.Api.Errors;
-using BuberDinner.Api.Filters;
 using BuberDinner.Application;
 using BuberDinner.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -17,7 +16,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
-    //app.UseMiddleware<ErrorHandlingMiddleware>();
     app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
     app.MapControllers();
